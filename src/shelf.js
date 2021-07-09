@@ -27,8 +27,14 @@ function listTitles(fantasyShelf) {
 }
 
 
-function searchShelf(sciFiShelf) {
-
+function searchShelf(sciFiShelf, bookTitle) {
+  var found = false;
+  for(var i = 0; i < sciFiShelf.length; i++){
+    if(sciFiShelf[i].title == bookTitle) {
+      found = true
+    }
+  }
+  return found;
 }
 module.exports = {
   shelfBook,
